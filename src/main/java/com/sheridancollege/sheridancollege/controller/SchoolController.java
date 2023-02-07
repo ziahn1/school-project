@@ -14,6 +14,10 @@ public class SchoolController {
 @Autowired
 private SchoolService schoolService;
 
+@GetMapping("/home")
+public String getHome(){
+    return "index";
+}
 @GetMapping("/addSchool")
 public String customerForm(Model model) {
     model.addAttribute("school", new School());
@@ -24,6 +28,11 @@ public String customerForm(Model model) {
 public String createCustomer(School school, Model model) {
     schoolService.addSchool(school);
     return "addSchool";
+}
+
+@GetMapping("/deleteSchools")
+public String deleteSchools(){
+    return "deleteSchools";
 }
 
 @GetMapping("/getSchools")

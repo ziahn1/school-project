@@ -7,11 +7,25 @@
 <body>
 <div >
     <h1>School Detail</h1>
-    <th:block th:each="school : ${schools}">
+    <table>
+        <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Strength</th>
+            </tr>
+          </thead>
+
+    <tbody>
+    <tr th:each="school : ${schools}">
     <td th:text="${school.name}">School Name</td>
     <td th:text="${school.address}">Address</td>
     <td th:text="${school.strength}">Strength</td>
-    </th:block>
+    </tr>
+    </tbody>
+    </div>
+</table>
 </div>
 </body>
 </html>

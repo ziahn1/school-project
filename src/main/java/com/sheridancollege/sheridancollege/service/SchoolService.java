@@ -21,4 +21,11 @@ public class SchoolService {
     public ArrayList<School> getAllSchools(){
         return list;
     }
+
+    public String deleteSchool(){
+        
+        list.removeAll(list);
+        
+        return "All the schools removed";
+    }
 }
