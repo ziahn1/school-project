@@ -32,6 +32,7 @@ public String createCustomer(School school, Model model) {
 
 @GetMapping("/deleteSchools")
 public String deleteSchools(){
+    schoolService.deleteSchool();
     return "deleteSchools";
 }
 

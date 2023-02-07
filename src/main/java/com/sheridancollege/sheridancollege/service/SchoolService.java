@@ -25,6 +25,8 @@ public class SchoolService {
     public String deleteSchool(){
         
         list.removeAll(list);
+
+        System.out.println("All the schools removed");
         
         return "All the schools removed";
     }
