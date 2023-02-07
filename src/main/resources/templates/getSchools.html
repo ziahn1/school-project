@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>User Registration</title>
+</head>
+<body>
+<div >
+    <h1>School Detail</h1>
+    <th:block th:each="school : ${schools}">
+    <td th:text="${school.name}">School Name</td>
+    <td th:text="${school.address}">Address</td>
+    <td th:text="${school.strength}">Strength</td>
+    </th:block>
+</div>
+</body>
+</html>
